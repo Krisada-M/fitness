@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.classBookingRepository = exports.trainerBookingRepository = exports.packageRepository = exports.userRepository = void 0;
+const data_source_1 = require("./data-source");
+const classBooking_entity_1 = require("./entitys/classBooking.entity");
+const package_entity_1 = require("./entitys/package.entity");
+const trainerBooking_entity_1 = require("./entitys/trainerBooking.entity");
+const user_entity_1 = require("./entitys/user.entity");
+exports.userRepository = data_source_1.myData.getRepository(user_entity_1.FitnessUser);
+exports.packageRepository = data_source_1.myData.getRepository(package_entity_1.FitnessPackage);
+exports.trainerBookingRepository = data_source_1.myData.getRepository(trainerBooking_entity_1.FitnessTrainerBooking);
+exports.classBookingRepository = data_source_1.myData.getRepository(classBooking_entity_1.FitnessClassBooking);
