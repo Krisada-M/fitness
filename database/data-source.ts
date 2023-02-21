@@ -1,7 +1,6 @@
 import * as dotenv from "dotenv";
 import { env } from "process";
 import { DataSource } from "typeorm";
-import { createDatabase } from "typeorm-extension";
 
 dotenv.config();
 
@@ -19,7 +18,7 @@ export const myData = new DataSource({
 });
 
 export const connect = async () => {
-  await createDatabase();
+  // await createDatabase();
   await myData
     .initialize()
     .then(() => {
